@@ -1,0 +1,28 @@
+{
+	"name": "plugin/mustang-validation",
+	"description": "Dis",
+	"keywords": [
+		"mustang-validation",
+		"php",
+		"sdk",
+		"api"
+	],
+	"type": "project",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Mustang Validation",
+			"homepage": "https://mustang-validation.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Mustang\\": "src/"
+		}
+	},
+	"require": {},
+	"require-dev": {},
+	"autoload-dev": {
+		"psr-4": {}
+	}
+}
