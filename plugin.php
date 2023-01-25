@@ -1,5 +1,6 @@
 <?php
 
+namespace Mustang\Core;
 
 use Mustang\Core\Handler;
 use Mustang\Core\Mustang;
@@ -56,7 +57,7 @@ class Plugin
      */
     public static function activate()
     {
-        // Activator::activate();
+        Activator::activate();
     }
 
     /**
@@ -68,6 +69,6 @@ class Plugin
      */
     public static function deactivate()
     {
-        // Deactivator::deactivate();
+        Deactivator::deactivate();
     }
 }

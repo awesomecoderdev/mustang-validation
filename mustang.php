@@ -30,7 +30,7 @@
 
 
 // If this file is called directly, abort.
-!defined('WPINC') ? die : include("plugin.php");
+!defined('WPINC') ? exit : include("plugin.php");
 
 /**
  * Currently plugin version.
@@ -44,9 +44,7 @@ define('MUSTANG_BASENAME', plugin_basename(__FILE__));
 
 
 // If this file is called directly, abort.
-if (file_exists(__DIR__ . "/vendor/autoload.php")) {
-    include __DIR__ . "/vendor/autoload.php";
-}
+!file_exists(__DIR__ . "/vendor/autoload.php") ? exit : include(__DIR__ . "/vendor/autoload.php");
 
 /**
  * The activate and deactivation action of the plugin.
@@ -56,8 +54,8 @@ if (file_exists(__DIR__ . "/vendor/autoload.php")) {
  *
  */
 
-register_activation_hook(__FILE__, [Plugin::class, 'activate']);
-register_deactivation_hook(__FILE__, [Plugin::class, 'deactivate']);
+register_activation_hook(__FILE__, [\Mustang\Core\Plugin::class, 'activate']);
+register_deactivation_hook(__FILE__, [\Mustang\Core\Plugin::class, 'deactivate']);
 
 /**
  * Load core of the plugin.
@@ -66,4 +64,4 @@ register_deactivation_hook(__FILE__, [Plugin::class, 'deactivate']);
  * @package           mustang-validation
  */
 
-Plugin::instance();
+\Mustang\Core\Plugin::instance();

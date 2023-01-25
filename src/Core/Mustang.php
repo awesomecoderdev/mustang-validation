@@ -54,12 +54,12 @@ class Mustang
 		}
 		$this->plugin_name = 'mustang-validation';
 
-		// $this->loader = new Loader();
+		$this->loader = new Loader();
 
 
-		// $this->set_locale();
-		// $this->define_admin_hooks();
-		// $this->define_public_hooks();
+		$this->set_locale();
+		$this->define_admin_hooks();
+		$this->define_public_hooks();
 	}
 
 	/**
@@ -95,7 +95,7 @@ class Mustang
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_backend, 'enqueue_scripts', 9999999999);
 
 		// create menu
-		// $this->loader->add_action('admin_menu', $plugin_backend, 'MUSTANG_admin_menu');
+		$this->loader->add_action('admin_menu', $plugin_backend, 'mustang_admin_menu');
 	}
 
 	/**
@@ -121,7 +121,7 @@ class Mustang
 	 */
 	public function run()
 	{
-		// $this->loader->run();
+		$this->loader->run();
 	}
 
 	/**

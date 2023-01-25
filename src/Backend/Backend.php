@@ -69,7 +69,7 @@ class Backend
 	 * @since    1.0.0
 	 *
 	 */
-	public function MUSTANG_admin_menu()
+	public function mustang_admin_menu()
 	{
 		add_menu_page(__("Mustang Validation", "mustang-validation"), __("Mustang Validation", "mustang-validation"), 'manage_options', 'mustang-validation', array($this, 'menu_activator_callback'), 'dashicons-image-filter', 50);
 		add_submenu_page('mustang-validation', __("Dashboard", "mustang-validation"), __("Dashboard", "mustang-validation"), 'manage_options', 'mustang-validation', array($this, 'mustang_dashboard_callback'));
@@ -123,13 +123,13 @@ class Backend
 
 		if (in_array($hook, $this->pages)) {
 			wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'assets/css/app.css', array(), (filemtime(MUSTANG_PATH . "assets/css/app.css") ?? $this->version), 'all');
-			wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'backend/css/awesomecoder-backend.css', array(), (filemtime(MUSTANG_PATH . "backend/css/awesomecoder-backend.css") ?? $this->version), 'all');
+			wp_enqueue_style("{$this->plugin_name}-backend", MUSTANG_URL . 'backend/css/backend.css', array(), (filemtime(MUSTANG_PATH . "backend/css/backend.css") ?? $this->version), 'all');
 		}
 
-		// metabox css
-		if (in_array($hook, $this->metabox)) {
-			wp_enqueue_style("{$this->plugin_name}-metabox", MUSTANG_URL . 'backend/css/metabox.css', array(), filemtime(MUSTANG_PATH . "backend/css/metabox.css"), 'all');
-		}
+		// // metabox css
+		// if (in_array($hook, $this->metabox)) {
+		// 	// wp_enqueue_style("{$this->plugin_name}-metabox", MUSTANG_URL . 'backend/css/metabox.css', array(), filemtime(MUSTANG_PATH . "backend/css/metabox.css"), 'all');
+		// }
 	}
 
 	/**
@@ -152,8 +152,20 @@ class Backend
 		 * class.
 		 */
 
-		wp_enqueue_script("{$this->plugin_name}", MUSTANG_URL . 'backend/js/backend.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/backend.js") ?? $this->version), false);
+		wp_enqueue_script("{$this->plugin_name}", MUSTANG_URL . 'backend/js/init.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/init.js") ?? $this->version), false);
 		// Some local vairable to get ajax url
+
+		wp_enqueue_script("{$this->plugin_name}", MUSTANG_URL . 'backend/js/backend.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/backend.js") ?? $this->version), true);
+
+		if (in_array($hook, $this->pages)) {
+			wp_enqueue_script("{$this->plugin_name}-backend", MUSTANG_URL . 'backend/js/backend.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/backend.js") ?? $this->version), true);
+		}
+
+		// // metabox css
+		// if (in_array($hook, $this->metabox)) {
+		// 	wp_enqueue_script("{$this->plugin_name}-metabox", MUSTANG_URL . 'backend/js/metabox.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/metabox.js") ?? $this->version), true);
+		// }
+
 
 		wp_localize_script($this->plugin_name, $this->plugin_name, array(
 			"plugin" => [
@@ -164,14 +176,5 @@ class Backend
 			"url" 		=> get_bloginfo('url'),
 			"ajaxurl"	=> admin_url("admin-ajax.php"),
 		));
-
-		if (in_array($hook, $this->pages)) {
-			wp_enqueue_script("{$this->plugin_name}-backend", MUSTANG_URL . 'backend/js/backend.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/backend.js") ?? $this->version), true);
-		}
-
-		// metabox css
-		if (in_array($hook, $this->metabox)) {
-			wp_enqueue_script("{$this->plugin_name}-metabox", MUSTANG_URL . 'backend/js/metabox.js', array('jquery'), (filemtime(MUSTANG_PATH . "backend/js/metabox.js") ?? $this->version), true);
-		}
 	}
 }
