@@ -67,7 +67,7 @@ register_deactivation_hook(__FILE__, [\Mustang\Core\Plugin::class, 'deactivate']
  * @package           mustang-validation
  */
 
-\Mustang\Core\Plugin::instance();
+\Mustang\Plugin::instance();
 
 // // Configure OAuth2 access token for authorization: default
 // $config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');

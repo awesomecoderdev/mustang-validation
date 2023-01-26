@@ -1,12 +1,10 @@
 <?php
 
-namespace Mustang\Core;
+namespace Mustang;
 
 use Mustang\Core\Handler;
-use Mustang\Core\Mustang;
-use Mustang\Core\Activator;
-use Mustang\Core\Deactivator;
 use Mustang\Core\MetaBox;
+use Mustang\Core\Mustang;
 use Mustang\Core\ShortCode;
 
 class Plugin
@@ -41,8 +39,8 @@ class Plugin
         ShortCode::run();
 
         // load MetaBox
-        $MetaBox = new MetaBox();
-        $MetaBox->run();
+        $metaBox = new MetaBox();
+        $metaBox->run();
 
         // load Handler
         Handler::init();
