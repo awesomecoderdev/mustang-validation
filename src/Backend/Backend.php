@@ -71,7 +71,7 @@ class Backend
 	 */
 	public function mustang_admin_menu()
 	{
-		add_menu_page(__("Mustang Validation", "mustang-validation"), __("Mustang Validation", "mustang-validation"), 'manage_options', 'mustang-validation', array($this, 'menu_activator_callback'), 'dashicons-image-filter', 50);
+		add_menu_page(config("mustang.name"), config("mustang.name"), 'manage_options', config("mustang.text-domain"), array($this, 'menu_activator_callback'), 'dashicons-image-filter', 50);
 		add_submenu_page('mustang-validation', __("Dashboard", "mustang-validation"), __("Dashboard", "mustang-validation"), 'manage_options', 'mustang-validation', array($this, 'mustang_dashboard_callback'));
 	}
 

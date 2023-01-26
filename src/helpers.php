@@ -11,7 +11,7 @@ if (!function_exists('config')) {
      */
     function config($key = null, $default = null)
     {
-        $config = explode(".", strtolower(preg_replace("/[^a-zA-Z0-9\.]+/", "", $key)));
+        $config = explode(".", strtolower(preg_replace("/[^a-zA-Z0-9\_.-]+/", "", $key)));
         $file = isset($config[0]) ? $config[0] : "mustang";
         $option = isset($config[1]) ? $config[1] : false;
 
