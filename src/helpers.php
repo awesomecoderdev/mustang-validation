@@ -12,11 +12,14 @@ if (!function_exists('config')) {
     function config($key = null, $default = null)
     {
         $config = explode(".", strtolower(preg_replace("/[^a-zA-Z0-9\_.-]+/", "", $key)));
-        $file = isset($config[0]) ? $config[0] : "mustang";
-        $option = isset($config[1]) ? $config[1] : false;
+        $keys = count($config);
+        $file = isset($config[0]) ? $config[0] : false;
+        $option = isset($config[1]) ? $config[1] : $file;
 
-        if (!file_exists(__DIR__ . "/../config/$file.php")) {
+        if ($keys != 1 && !file_exists(__DIR__ . "/../config/$file.php")) {
             return $default;
+        } else if ($keys == 1) {
+            $file = "mustang";
         }
 
         $options = include(__DIR__ . "/../config/$file.php");
@@ -24,7 +27,8 @@ if (!function_exists('config')) {
         if (!is_array($options) || is_null($key)) {
             return $default;
         }
-        if ($option) {
+
+        if ($options) {
             if (isset($options[$option])) {
                 return $options[$option];
             }
