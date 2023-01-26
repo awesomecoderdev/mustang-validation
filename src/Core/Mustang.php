@@ -95,7 +95,7 @@ class Mustang
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_backend, 'enqueue_scripts', 9999999999);
 
 		// create menu
-		$this->loader->add_action('admin_menu', $plugin_backend, 'mustang_admin_menu');
+		// $this->loader->add_action('admin_menu', $plugin_backend, 'mustang_admin_menu');
 	}
 
 	/**

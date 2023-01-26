@@ -7,7 +7,7 @@ namespace Mustang\Module;
  *
  * @since 0.1
  */
-class Shortcode
+class ShortCode
 {
     /**
      * @since 0.1
@@ -63,9 +63,9 @@ class Shortcode
      *
      * @since 0.1
      *
-     * @param Shortcode $shortcode The shortcode instance to register.
+     * @param ShortCode $shortcode The shortcode instance to register.
      */
-    public static function register(Shortcode $shortcode)
+    public static function register(ShortCode $shortcode)
     {
         add_shortcode($shortcode->tag, $shortcode->callback);
     }

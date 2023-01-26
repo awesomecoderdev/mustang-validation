@@ -40,7 +40,6 @@ if (!function_exists('config')) {
     }
 }
 
-
 if (!function_exists('_t')) {
     /**
      * Get / set the specified configuration value.
