@@ -57,8 +57,8 @@ define('MUSTANG_BASENAME', plugin_basename(__FILE__));
  *
  */
 
-register_activation_hook(__FILE__, [\Mustang\Core\Plugin::class, 'activate']);
-register_deactivation_hook(__FILE__, [\Mustang\Core\Plugin::class, 'deactivate']);
+register_activation_hook(__FILE__, [\Mustang\Plugin::class, 'activate']);
+register_deactivation_hook(__FILE__, [\Mustang\Plugin::class, 'deactivate']);
 
 /**
  * Load core of the plugin.

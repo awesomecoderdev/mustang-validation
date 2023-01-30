@@ -171,7 +171,6 @@ class Backend
 			"plugin" => [
 				"name" 		=> "Mustang Validation",
 				"author"	=>	"Mustang Validation",
-				"homepage" 	=> "https://github.com/awesomecoderdev/mustang-validation"
 			],
 			"url" 		=> get_bloginfo('url'),
 			"ajaxurl"	=> admin_url("admin-ajax.php"),

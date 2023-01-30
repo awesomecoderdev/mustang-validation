@@ -57,7 +57,7 @@ class Frontend
 		 * class.
 		 */
 
-		wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'frontend/css/frontend.css', array(), (filemtime(MUSTANG_PATH . "frontend/css/awesomecoder-frontend.css") ?? $this->version), 'all');
+		wp_enqueue_style("{$this->plugin_name}", MUSTANG_URL . 'frontend/css/frontend.css', array(), (filemtime(MUSTANG_PATH . "frontend/css/frontend.css") ?? $this->version), 'all');
 	}
 
 	/**
@@ -88,7 +88,6 @@ class Frontend
 			"plugin" => [
 				"name" 		=> "Mustang Validation",
 				"author"	=>	"Mustang Validation",
-				"homepage" 	=> "https://github.com/awesomecoderdev/mustang-validation"
 			],
 			"url" 		=> get_bloginfo('url'),
 			"ajaxurl"	=> admin_url("admin-ajax.php"),

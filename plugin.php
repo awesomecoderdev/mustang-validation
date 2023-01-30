@@ -5,7 +5,9 @@ namespace Mustang;
 use Mustang\Core\Handler;
 use Mustang\Core\MetaBox;
 use Mustang\Core\Mustang;
+use Mustang\Core\Activator;
 use Mustang\Core\ShortCode;
+use Mustang\Core\Deactivator;
 
 class Plugin
 {
