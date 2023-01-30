@@ -167,7 +167,7 @@ class Backend
 		// }
 
 
-		wp_localize_script($this->plugin_name, $this->plugin_name, array(
+		wp_localize_script($this->plugin_name, str_replace("-", "_", $this->plugin_name), array(
 			"plugin" => [
 				"name" 		=> "Mustang Validation",
 				"author"	=>	"Mustang Validation",

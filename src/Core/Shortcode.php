@@ -15,18 +15,15 @@ class ShortCode // implements ContainerInterface
 	 */
 	public static function shortcode_callback($atts = array(), $content = null, $tag = '')
 	{
-		$options = shortcode_atts(array(
-			"posts_per_page" => 12,
-			"paginate" => true,
-			"category" => null,
-			"layout" => null,
+		$props = shortcode_atts(array(
+			"privacy" => "https://google.com",
 		), $atts);
 
 		ob_start();
 		include_once MUSTANG_PATH . 'frontend/views/shortcode/index.php';
-		$apps = ob_get_contents();
+		$output = ob_get_contents();
 		ob_end_clean();
-		return $apps;
+		return $output;
 	}
 
 	/**
