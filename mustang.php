@@ -68,20 +68,3 @@ register_deactivation_hook(__FILE__, [\Mustang\Plugin::class, 'deactivate']);
  */
 
 \Mustang\Plugin::instance();
-
-// // Configure OAuth2 access token for authorization: default
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-// $apiInstance = new Swagger\Client\Api\ErrorControllerApi(
-//     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-//     // This is optional, `GuzzleHttp\Client` will be used as default.
-//     new Client(),
-//     $config
-// );
-
-// try {
-//     $result = $apiInstance->handle();
-//     print_r($result);
-// } catch (Exception $e) {
-//     echo 'Exception when calling ErrorControllerApi->handle: ', $e->getMessage(), PHP_EOL;
-// }

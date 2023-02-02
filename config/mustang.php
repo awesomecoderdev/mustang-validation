@@ -42,6 +42,6 @@ return [
     |
     */
 
-    'allowed_file_type' => ['application/pdf'],
+    'allowed_file_type' => ['application/pdf', 'text/xml'],
 
 ];

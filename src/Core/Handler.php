@@ -126,11 +126,12 @@ class Handler
 					}
 
 
-
-					$_SESSION[$token] = array(
-						"file"  => $_FILES['file'],
-						"request" => $_REQUEST,
-					);
+					// session_unset();
+					// session_destroy();
+					// $_SESSION[$token] = array(
+					// 	"file"  => $_FILES['file'],
+					// 	"request" => $_REQUEST,
+					// );
 
 					// $_SESSION["outputs"] = array(
 					// 	"file"  => $_FILES['file'],
@@ -144,8 +145,8 @@ class Handler
 				// wp_redirect("$redirect?success");
 				// exit;
 			} else {
-				wp_redirect("$redirect?error=invalid_token");
-				exit;
+				// wp_redirect("$redirect?error=invalid_token");
+				// exit;
 			}
 		}
 	}

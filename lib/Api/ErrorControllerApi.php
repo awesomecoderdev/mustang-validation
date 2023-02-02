@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ErrorControllerApi
  * PHP version 5
@@ -146,7 +147,7 @@ class ErrorControllerApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -156,7 +157,6 @@ class ErrorControllerApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -175,7 +175,7 @@ class ErrorControllerApi
     /**
      * Operation handleAsync
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -194,7 +194,7 @@ class ErrorControllerApi
     /**
      * Operation handleAsyncWithHttpInfo
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -294,10 +294,8 @@ class ErrorControllerApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
@@ -389,7 +387,7 @@ class ErrorControllerApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -399,7 +397,6 @@ class ErrorControllerApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -418,7 +415,7 @@ class ErrorControllerApi
     /**
      * Operation handle1Async
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -437,7 +434,7 @@ class ErrorControllerApi
     /**
      * Operation handle1AsyncWithHttpInfo
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -537,10 +534,8 @@ class ErrorControllerApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
@@ -632,7 +627,7 @@ class ErrorControllerApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -642,7 +637,6 @@ class ErrorControllerApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -661,7 +655,7 @@ class ErrorControllerApi
     /**
      * Operation handle2Async
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -680,7 +674,7 @@ class ErrorControllerApi
     /**
      * Operation handle2AsyncWithHttpInfo
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -780,10 +774,8 @@ class ErrorControllerApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
@@ -875,7 +867,7 @@ class ErrorControllerApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -885,7 +877,6 @@ class ErrorControllerApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -904,7 +895,7 @@ class ErrorControllerApi
     /**
      * Operation handle3Async
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -923,7 +914,7 @@ class ErrorControllerApi
     /**
      * Operation handle3AsyncWithHttpInfo
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -1023,10 +1014,8 @@ class ErrorControllerApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
@@ -1118,7 +1107,7 @@ class ErrorControllerApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -1128,7 +1117,6 @@ class ErrorControllerApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -1147,7 +1135,7 @@ class ErrorControllerApi
     /**
      * Operation handle4Async
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -1166,7 +1154,7 @@ class ErrorControllerApi
     /**
      * Operation handle4AsyncWithHttpInfo
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -1266,10 +1254,8 @@ class ErrorControllerApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
@@ -1361,7 +1347,7 @@ class ErrorControllerApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -1371,7 +1357,6 @@ class ErrorControllerApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -1390,7 +1375,7 @@ class ErrorControllerApi
     /**
      * Operation handle5Async
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -1409,7 +1394,7 @@ class ErrorControllerApi
     /**
      * Operation handle5AsyncWithHttpInfo
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -1509,10 +1494,8 @@ class ErrorControllerApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
@@ -1604,7 +1587,7 @@ class ErrorControllerApi
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
+                if (!in_array($returnType, ['string', 'integer', 'bool'])) {
                     $content = json_decode($content);
                 }
             }
@@ -1614,7 +1597,6 @@ class ErrorControllerApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -1633,7 +1615,7 @@ class ErrorControllerApi
     /**
      * Operation handle6Async
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -1652,7 +1634,7 @@ class ErrorControllerApi
     /**
      * Operation handle6AsyncWithHttpInfo
      *
-     * 
+     *
      *
      *
      * @throws \InvalidArgumentException
@@ -1752,10 +1734,8 @@ class ErrorControllerApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = \GuzzleHttp\json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = \GuzzleHttp\Psr7\build_query($formParams);

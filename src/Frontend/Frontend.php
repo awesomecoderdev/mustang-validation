@@ -81,8 +81,8 @@ class Frontend
 		 */
 
 		wp_enqueue_script("{$this->plugin_name}", MUSTANG_URL . 'frontend/js/init.js', array('jquery'), (filemtime(MUSTANG_PATH . "frontend/js/init.js") ?? $this->version), false);
-		wp_enqueue_script("{$this->plugin_name}", MUSTANG_URL . 'frontend/js/frontend.js', array('jquery'), (filemtime(MUSTANG_PATH . "frontend/js/frontend.js") ?? $this->version), false);
-		wp_enqueue_script("{$this->plugin_name}-jquery", MUSTANG_URL . 'assets/js/jquery-2.0.3.js', array('jquery'), null, false);
+		wp_enqueue_script("{$this->plugin_name}-frontend", MUSTANG_URL . 'frontend/js/frontend.js', array('jquery'), (filemtime(MUSTANG_PATH . "frontend/js/frontend.js") ?? $this->version), true);
+		// wp_enqueue_script("{$this->plugin_name}-jquery", MUSTANG_URL . 'assets/js/jquery-2.0.3.js', array('jquery'), null, false);
 		// Some local vairable to get ajax url
 		wp_localize_script($this->plugin_name, str_replace("-", "_", $this->plugin_name), array(
 			"plugin" => [

@@ -18,3 +18,17 @@ for (i = 0; i < close.length; i++) {
 		}, 600);
 	};
 }
+
+var closeModal = document.getElementById("closeModal");
+var modal = document.getElementById("modal");
+
+if (closeModal) {
+	closeModal.addEventListener("click", function () {
+		// Set the opacity of div to 0 (transparent)
+		modal.style.opacity = "0";
+		// Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+		setTimeout(function () {
+			modal.style.display = "none";
+		}, 600);
+	});
+}
